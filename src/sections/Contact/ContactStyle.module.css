@@ -17,5 +17,5 @@
 .contactContainer {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: 44px;
 }
