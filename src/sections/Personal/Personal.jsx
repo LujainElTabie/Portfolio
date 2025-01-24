@@ -9,6 +9,8 @@ import locationLight from "../../assets/location-light.svg";
 import moon from "../../assets/moon.svg";
 import sun from "../../assets/sun.svg";
 import { useTheme } from "../../common/ThemeContext";
+import SocialIcons from "../../components/SocialIcons/SocialIcons";
+import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 import styles from "./PersonalStyles.module.css";
 
 function Personal() {
@@ -22,12 +24,10 @@ function Personal() {
   return (
     <section id="personal" className={styles.container}>
       <div className={styles.colorModeContainer}>
+        <div>
+          <ThemeToggle onClick={toggleTheme} value={theme} />
+        </div>
         <img className={styles.hero} src={heroImg} />
-        <img
-          className={styles.colorMode}
-          onClick={toggleTheme}
-          src={themeIcon}
-        />
       </div>
 
       <div className={styles.info}>
@@ -37,12 +37,7 @@ function Personal() {
         </h1>
         <h2>Frontend Developer</h2>
         <span>
-          <a href="https://github.com/LujainElTabie/  " target="_blank">
-            <img src={githubIcon} />
-          </a>
-          <a href="https://www.linkedin.com/in/lujain-mostafa/" target="_blank">
-            <img src={linkedinIcon} />
-          </a>
+          <SocialIcons />
         </span>
         <span className={styles.locationContainer}>
           <img src={locationIcon} width={30} height={30} />
